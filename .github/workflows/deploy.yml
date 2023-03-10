@@ -11,6 +11,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: Python safety check
+        env:
+          DEP_PATH: /requirements.txt
         uses: aufdenpunkt/python-safety-check@master
       - name: Deploy
         env:
